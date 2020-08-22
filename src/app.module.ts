@@ -3,10 +3,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ProductsModule } from './products/products.module';
 import { AuthMiddleware } from './middlewares/auth.middleware';
-import { ConfigModule } from '@nestjs/config';
+import { DatabaseModule } from './database/database.module';
 
 @Module({
-  imports: [ProductsModule, ConfigModule.forRoot()],
+  imports: [ProductsModule, DatabaseModule],
   controllers: [AppController],
   providers: [AppService],
 })
