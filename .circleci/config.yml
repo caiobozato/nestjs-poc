@@ -3,11 +3,8 @@ orbs:
   node: circleci/node@3.0.0
 jobs:
   build:
-    executor:
-      name: node/default
-      tag: '10.4'
+    docker:
+      - image: circleci/node:12.16.3
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install
+      - run: npm install
