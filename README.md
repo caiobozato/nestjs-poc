@@ -1,3 +1,5 @@
+[![caiobozato](https://circleci.com/gh/caiobozato/nestjs-mongo.svg?style=svg)](https://app.circleci.com/pipelines/github/caiobozato/nestjs-mongo)
+
 ## Description
 
 A CRUD application using [Nest](https://github.com/nestjs/nest) framework.
