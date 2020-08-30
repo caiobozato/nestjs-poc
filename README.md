@@ -23,15 +23,6 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## Docs
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
+To see API documentation, go to https://nestjs-crud-poc.herokuapp.com/api/
