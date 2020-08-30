@@ -13,14 +13,10 @@ export class ProductsService {
     @InjectModel('Products') private readonly productModel: Model<Product>,
   ) {}
 
-  private products: Product[] = [];
   //Alternative syntax
   //products: Array<Product> = [];
-  async insertProduct(
-    title: string,
-    description: string,
-    price: number,
-  ): Promise<string> {
+  async insertProduct(product: Product): Promise<string> {
+    const { title, description, price } = product;
     const newProduct = new this.productModel({ title, description, price });
     const result = await newProduct.save();
     return result.id as string;

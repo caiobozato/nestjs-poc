@@ -1,4 +1,5 @@
 import * as mongoose from 'mongoose';
+import { ApiProperty, ApiResponseProperty } from '@nestjs/swagger';
 
 export const ProductSchema = new mongoose.Schema({
   title: { type: String, required: true },
@@ -6,9 +7,16 @@ export const ProductSchema = new mongoose.Schema({
   price: { type: Number, required: true },
 });
 
-export interface Product extends mongoose.Document {
-  id: string;
+export class Product extends mongoose.Document {
+  @ApiResponseProperty()
+  readonly id: string;
+
+  @ApiProperty()
   title: string;
+
+  @ApiProperty()
   description: string;
+
+  @ApiProperty()
   price: number;
 }
