@@ -69,6 +69,11 @@ export class ProductsController {
 
   @Patch(':id')
   @ApiOperation({ summary: 'Update a single product' })
+  @ApiBody({
+    description: 'Product data to be updated',
+    required: true,
+    type: Product,
+  })
   @ApiOkResponse({
     schema: {
       example: {
